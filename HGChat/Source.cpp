@@ -57,6 +57,7 @@ int main() {
 			Connections[ClientCount] = Connect;
 			send(Connections[ClientCount], m_connect, strlen(m_connect), NULL);
 			ClientCount++;
+			CreateThread(NULL, NULL, (LPTHREAD_START_ROUTINE)SendMessageToClient, (LPVOID)(ClientCount - 1), NULL, NULL);
 		}
 	}
 
