@@ -12,7 +12,14 @@ int ClientCount = 0;
 
 void SendMessageToClient(int ID)
 {
-
+	char* buffer = new char[1024];
+	for (;; Sleep(75)) {
+		memset(buffer, 0, sizeof(buffer));
+		if (recv(Connections[ID], buffer, 1024, NULL)) {
+			printf(buffer);
+			printf("\n");
+		}
+	}
 }
 
 
