@@ -8,6 +8,14 @@ SOCKET* Connections;
 SOCKET Listen;
 
 int ClientCount = 0;
+
+
+void SendMessageToClient(int ID)
+{
+
+}
+
+
 int main() {
 	setlocale(LC_ALL, "russian");
 	WSAData data;
