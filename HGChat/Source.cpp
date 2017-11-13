@@ -32,8 +32,7 @@ int main() {
 	WSAData data;
 	WORD version = MAKEWORD(2, 2);
 	int res = WSAStartup(version, &data);
-	int(res != 0) 
-	{
+	int(res != 0){
 		return 0;
 	}
 
@@ -75,3 +74,5 @@ int main() {
 	return 1;
 
 }
+
+// рч... 52 ошибки.... исправл€ть на мес€ц - другой...
