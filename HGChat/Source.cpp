@@ -18,8 +18,12 @@ void SendMessageToClient(int ID)
 		if (recv(Connections[ID], buffer, 1024, NULL)) {
 			printf(buffer);
 			printf("\n");
+			for (int i = 0; i <= ClientCount; i++) {
+				send(Connections[i], buffer, strlen(buffer), NULL);
+			}
 		}
 	}
+	delete buffer;
 }
 
 
